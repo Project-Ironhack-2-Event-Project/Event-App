@@ -35,12 +35,15 @@ MVP :
                 - Bonus : Review with Point        
                 - (Number of Participant maximum)
 
+
+
 - Account :
         User Fonctionnality:
             - Create Event
             - Profil with Event created
             - (Favorites Event List)
             - Bonus : Review with Point
+
 
 
 Bonus Buy: 
@@ -98,7 +101,7 @@ Share the work :
 
 
 
-    Together Connect : App.js | .Env | Route | Connecting Name with HBS | Models
+    Together Connect : App.js ✅| .Env - ✅ | Route ✅| Connecting Name with HBS - ✅ | Models ✅
 
 
 
@@ -118,7 +121,7 @@ Share the work :
 
     Models :
     
-    user-Models.js : Model of User
+    user-Models.js : Model of User ✅
 
     event-Models.js : Model of Event
 
