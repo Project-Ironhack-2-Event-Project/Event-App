@@ -1,0 +1,13 @@
+<h1>All events around you</h1>
+
+<article class="list-event">
+    {{#each {{}}}}
+        <div class="card-event">
+            <img src="{{this.image}}">
+            <h3>{{this.title}}</h3>
+            <hr>
+            <p>{{this.place}}</p>
+            <p>{{this.date}}</p>
+        </div>
+    {{/each}}
+</article>

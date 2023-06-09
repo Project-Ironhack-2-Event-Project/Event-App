@@ -143,6 +143,33 @@ nav li{
   margin: 2em 0em;
   color: white;
 }
+
+
+.list-event{
+  display: flex;
+  width: 100%;
+}
+
+.card-event{
+  width: 28%;
+  background-color: black;
+  border: 1px solid #ff7b00;
+}
+
+.card-event hr{
+  color: #ff7b00;
+  margin: 0;
+  padding: 0;
+}
+
+.card-event p{
+  font-size: 1.2em;
+} 
+
+.card-event h3{
+  font-size: 2em;
+}
+
 footer{
   background-color: black;
   color: white;

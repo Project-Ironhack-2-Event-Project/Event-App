@@ -28,7 +28,7 @@ MVP :
                 - Name
                 - Description
                 - Place
-                - Pictures
+                - Picture
                 - Dates
                 - (Likes Post or Account)
                 - (chat for Organisation)
@@ -138,6 +138,24 @@ Share the work :
     
 
     Pierre - Front-End :
+
+    Layout✅
+
+    Home Page ✅
+
+    List of Event ✅
+
+    Event details 
+
+    Form for Login
+
+    form for Register
+
+    Recommandation
+
+    Profil page
+
+    Fix all variable for the Back and front information
 
     
 
