@@ -30,7 +30,7 @@ app.use("/", indexRoutes);
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
 
-// app.use("/", require('./routes/event.routes'));
+app.use("/", require('./routes/event.routes'));
 // app.use("/", require('./routes/privates.routes'));
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
