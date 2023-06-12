@@ -5,7 +5,7 @@ const eventSchema = new Schema(
         //user who created this event
         user: {},
         //required = true
-        name: {
+        title: {
             type: String,
             required: true,
         },
@@ -32,6 +32,10 @@ const eventSchema = new Schema(
         },
         price: {
             type: Number,
+            required: false
+        },
+        description: {
+            type: String,
             required: false
         },
         //maxParticipant

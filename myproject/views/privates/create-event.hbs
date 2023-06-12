@@ -1,0 +1,36 @@
+<div class="create-form">
+  <h2>Create</h2>
+  <form action="/profil/create" method="POST">
+
+    <label> Title :
+      <input type="text" name="title" placeholder="Title" />
+    </label>
+
+    <label> Place of Event :
+      <input type="text" name="place" placeholder="Place" />
+    </label>
+
+    <label> Description of Event :
+      <input type="text" name="description" placeholder="Description of your Event" />
+    </label>
+
+    <label> Date of Event :
+      <input type="date" name="date"  />
+    </label>
+    
+    <label> Pictures of Event :
+      <input type="image" name="pictures"/>
+    </label>
+    
+    <label> Price of Event :
+      <input type="number" name="price"/>
+    </label>
+
+    <button id="btn-create" type="submit">Create your event</button>
+
+
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div>
