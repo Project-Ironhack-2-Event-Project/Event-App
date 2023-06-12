@@ -42,7 +42,7 @@ router.get("/profil", (req, res, next) => {
 })
 
 
-// EVENT CREATION
+// CREATE EVENT
 router.get("/profil/create", (req, res, next) => {
     res.render('privates/create-event');
 })
@@ -64,8 +64,12 @@ router.post('/profil/create', (req, res, next)=>{
         .catch(e => next(e))
 })
 
+//DELETE EVENT
 router.get("/profil/delete", (req, res, next) => {
-    res.render('privates/delete-event');
+    const eventId = req.params.id
+    Event.findByIdAndDelete(eventId)
+        .then(() => res.redirect('/profil'))
+        .catch(e => next(e))
 })
 
 router.get("/profil/favorite", (req, res, next) => {
