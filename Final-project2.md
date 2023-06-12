@@ -1,5 +1,5 @@
 MVP :
-- Navigation
+- Navigation ✅
     - Home
     - List of Event in the city
     - Profile
@@ -8,7 +8,7 @@ MVP :
     - LogIn
     - LogOut
 
-- Home :
+- Home : ✅
     - Clean Page 
     - What's the concept
     - (link to different page)   
@@ -17,7 +17,7 @@ MVP :
     - Footer with creator 
 
 
-- List of Event :
+- List of Event : ✅
     - All Event 
     - Search Bar with (filter) :
             - Type (Concert, theater, free Event, Restaurant,..)
@@ -56,7 +56,7 @@ Bonus Buy:
 
 
 Model -
-User :
+User : ✅
     - Email :
         - Required
         - Unique
@@ -96,7 +96,7 @@ Event:
 
 
 Share the work :
-    set- up 
+    set- up ✅
     
 
 
@@ -113,11 +113,11 @@ Share the work :
 
     event-Routes.js = All Event Pages, Search-Bar, Event-Details
 
-    user-Routes.js = Register, Login
+    user-Routes.js = Register, Login ✅
 
     privates-Routes.js = Profil Page, Creation of Event, Edit of Event, Delete Event. 
 
-    home-routes.js = Home Page 
+    home-routes.js = Home Page ✅
 
     Models :
     
@@ -127,13 +127,13 @@ Share the work :
 
 
 
-    App.js with all Connection
+    App.js with all Connection✅
 
 
 
     Middleware :
 
-        Middleware for LoginIn and LogOut
+        Middleware for LoginIn and LogOut ✅
 
     
 
@@ -147,9 +147,9 @@ Share the work :
 
     Event details 
 
-    Form for Login
+    Form for Login✅
 
-    form for Register
+    form for Register✅
 
     Recommandation
 

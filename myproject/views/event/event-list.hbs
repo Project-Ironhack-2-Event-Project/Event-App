@@ -1,5 +1,24 @@
-
+<div class="list-event-contain">
 <h1 class="title-event">All events around you</h1>
+
+
+    <form class="search-bar-event">
+        <label for="dates"> Filter :
+            <select name="type" id="type-select">
+                <option value="">Select type</option>
+                <option value="Concert">Concert</option>
+                <option value="Theater">Theater</option>
+                <option value="Outside">Outside</option>
+                <option value="other">Other</option>
+            </select>
+        </label>
+
+        <label> Search by City :
+            <input type="search" name="search-bar" placeholder="Search your event">
+            <button type="submit">Search</button>
+        </label>
+        
+    </form>
 
 <article class="list-event">
 
@@ -58,3 +77,5 @@
             <button><a href="/event/:id">Details Here</a></button>
         </div>
 </article>
+
+</div>
