@@ -183,7 +183,7 @@ nav li{
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  padding: 4em 0em;
+  margin: 2em 0em;
 }
 
 .card-event{
@@ -192,11 +192,9 @@ nav li{
   align-items: center;
 
   margin: 2em 0em;
-  width: 25%;
-  background-color: #EBEBEB;
-  border: 2px solid #ff7b00;
-  border-radius: 2em;
-
+  width: 28%;
+  background-color: black;
+  border: none;
 }
 
 .card-event hr{
@@ -207,16 +205,16 @@ nav li{
 
 .card-event p{
   font-size: 1.2em;
-  color: black;
+  color: white;
 } 
 
 .card-event h3{
   font-size: 2em;
-  color: black;
+  color: #ff7b00;
 }
 
 .card-event img{
-    width: 80%;
+    width: 100%;
 }
 
 .card-event button{
@@ -224,12 +222,12 @@ nav li{
   border-radius: 3em;
   border: none;
   transition: 1s;
-  background-color: black;
+  background-color: white;
 }
 
 .card-event a{
   text-decoration: none;
-  color: white;
+  color: black;
   padding: 1.5em 3em;
   border-radius: 3em;
   transition: 1s;
@@ -250,10 +248,9 @@ color: black;
 .event-detail{
   background-color: #EBEBEB;
   width: 100%;
-  height: 60em;
+  height: 68em;
   display: flex;
-  justify-content: space-around;
-  
+  justify-content: center;
 }
 
 .event-detail-information{
@@ -261,7 +258,7 @@ color: black;
   width: 38%;
   height: 50em;
   border-radius: 2em;
-  padding: 1em;
+  margin: 5em 3.5em 6em;
 }
 
 .event-detail-information img{
@@ -279,7 +276,8 @@ color: black;
 #event-chat {
   width: 40%;
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 1em;
+  margin: 5em 3.5em
 }
 
 #event-chat form{
@@ -312,6 +310,12 @@ color: black;
 
 
 
+
+.profil{
+  width: 100%;
+  height: 92em;
+  background-color: #EBEBEB;
+}
 
 
 
