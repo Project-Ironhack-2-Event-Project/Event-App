@@ -13,31 +13,17 @@
                 <button><a href="/event/:id">Details Here</a></button>
             </div>
 
+        {{#each }}
             <div class="card-event">
-                <img src="../images/div-home1.jpg">
-                <h3>Football Party</h3>
+                <img src="{{this.pictures}}">
+                <h3>{{this.title}}</h3>
                 <hr>
-                <p>5 Rue Camille Godard, 33100, Bordeaux</p>
-                <p>Mardi 13 Juin | 2023 </p>
-                <button><a href="/event/:id">Details Here</a></button>   
+                <p>{{this.place}}</p>
+                <p>{{this.date}}</p>
+                <button><a href="/profil/{{this._id}}/edit">Details Here</a></button>
+                <button><a href="/profil/delete">Details Here</a></button>
             </div>
+        {{/each}}
 
-            <div class="card-event">
-                <img src="../images/div-home1.jpg">
-                <h3>Football Party</h3>
-                <hr>
-                <p>5 Rue Camille Godard, 33100, Bordeaux</p>
-                <p>Mardi 13 Juin | 2023 </p>
-                <button><a href="/event/:id">Details Here</a></button>
-            </div>
-
-            <div class="card-event">
-                <img src="../images/div-home1.jpg">
-                <h3>Football Party</h3>
-                <hr>
-                <p>5 Rue Camille Godard, 33100, Bordeaux</p>
-                <p>Mardi 13 Juin | 2023 </p>
-                <button><a href="/event/:id">Details Here</a></button>
-            </div>
     </article>
 </div>

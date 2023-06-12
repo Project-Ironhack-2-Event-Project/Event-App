@@ -22,16 +22,6 @@
 
 <article class="list-event">
 
-    {{!-- {{#each {{}}}} 
-        <div class="card-event">
-            <img src="{{this.image}}">
-            <h3>{{this.title}}</h3>
-            <hr>
-            <p>{{this.place}}</p>
-            <p>{{this.date}}</p>
-        </div>
-    {{/each}}--}}
-
         <div class="card-event">
             <img src="../images/div-home1.jpg">
             <h3>Football Party</h3>
@@ -76,6 +66,19 @@
             <p>Mardi 13 Juin | 2023 </p>
             <button><a href="/event/:id">Details Here</a></button>
         </div>
+
+
+            {{#each eventList}} 
+                <div class="card-event">
+                    <img src="{{this.image}}">
+                    <h3>{{this.title}}</h3>
+                    <hr>
+                    <p>{{this.place}}</p>
+                    <p>{{this.date}}</p>
+                    <button><a href="{{this._id}}">Details Here</a></button>
+                </div>
+            {{/each}}
+       
 </article>
 
 </div>
