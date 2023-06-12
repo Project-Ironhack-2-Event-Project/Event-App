@@ -21,7 +21,7 @@ router.get("/profil/create", (req, res, next) => {
 router.post('/profil/create', (req, res, next)=>{
     console.log(req.body);
     const newEvent = {
-        name: req.body.name,
+        title: req.body.title,
         place: req.body.place,
         date: req.body.date,
         description: req.body.description,
