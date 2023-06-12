@@ -47,7 +47,7 @@ router.get("/profil/create", (req, res, next) => {
     res.render('privates/create-event');
 })
 router.post('/profil/create', (req, res, next)=>{
-    console.log(req.body);
+    // console.log(req.body);
     const newEvent = {
         title: req.body.title,
         place: req.body.place,
@@ -65,7 +65,7 @@ router.post('/profil/create', (req, res, next)=>{
 })
 
 //DELETE EVENT
-router.get("/profil/delete", (req, res, next) => {
+router.post("/profil/:id/delete", (req, res, next) => {
     const eventId = req.params.id
     Event.findByIdAndDelete(eventId)
         .then(() => res.redirect('/profil'))
