@@ -7,5 +7,9 @@ router.get("/event", (req, res, next) => {
     res.render('event/event-list')
 })
 
+router.get("/event/:id", (req, res, next) => {
+    res.render('event/event-details');
+})
+
 
 module.exports = router;

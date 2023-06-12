@@ -38,7 +38,7 @@ nav li{
   position: relative;
   width: 100%;
   height: auto;
-  opacity: 0.75;
+  opacity: 0.65;
 }
 
 .header-home div{
@@ -48,17 +48,15 @@ nav li{
   align-items: center;
   flex-flow: column wrap;
   font-size: 24px;
-  top: 70%;
+  top: 40%;
   left: 40%;
 }
 
-.header-home h1{
-  color:black;
+.header-home h1, p{
+  color: #EBEBEB;
 }
 
-.header-home p{
-  color: black;
-}
+
 
 .article-home{
   display: flex;
@@ -147,6 +145,10 @@ nav li{
 }
 
 
+
+
+
+
 .title-event{
   width: 100%;
   background-color: #EBEBEB;
@@ -185,10 +187,12 @@ nav li{
 
 .card-event p{
   font-size: 1.2em;
+  color: black;
 } 
 
 .card-event h3{
   font-size: 2em;
+  color: black;
 }
 
 .card-event img{
@@ -218,6 +222,73 @@ nav li{
 .card-event a:hover{
 color: black;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.signup-form, .login-form{
+  width: 100%;
+  height: 70%;
+  display: flex;
+  background-color: #EBEBEB;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.signup-form, .login-form form{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-form, .login-form form label{
+  margin: 1em 1em;
+}
+
+#btn-signup, #btn-login {
+  padding: 1.5em 3em;
+  border-radius: 3em;
+  border: none;
+  transition: 1s;
+  background-color: black;
+  color: white;
+}
+
+
+#btn-signup:hover , #btn-login:hover{
+  background-color: #ff7b00;
+  color: black;
+}
+
+
 
 
 
