@@ -1,30 +1,30 @@
 MVP :
 - Navigation ✅
-    - Home
-    - List of Event in the city
-    - Profile
-    - (Recommandation)
-    - Register
-    - LogIn
-    - LogOut
+    - Home✅
+    - List of Event in the city✅
+    - Profile✅
+    - (Recommandation)✅
+    - Register✅
+    - LogIn✅
+    - LogOut✅
 
 - Home : ✅
-    - Clean Page 
-    - What's the concept
-    - (link to different page)   
+    - Clean Page ✅
+    - What's the concept ✅
+    - (link to different page)   ✅
             - Link with event Filter by type (concert, theater,..)
-    - (Recommandation)
-    - Footer with creator 
+    - (Recommandation)✅
+    - Footer with creator ✅
 
 
 - List of Event : ✅
     - All Event 
-    - Search Bar with (filter) :
+    - Search Bar with (filter) :✅
             - Type (Concert, theater, free Event, Restaurant,..)
             - City Bonus : (Kilometers Distance)
             - Date
     - Link for details Event 
-            Detail Page :
+            Detail Page :✅
                 - Name
                 - Description
                 - Place
@@ -39,8 +39,8 @@ MVP :
 
 - Account :
         User Fonctionnality:
-            - Create Event
-            - Profil with Event created
+            - Create Event ✅
+            - Profil with Event created ✅
             - (Favorites Event List)
             - Bonus : Review with Point
 
@@ -51,7 +51,7 @@ Bonus Buy:
     - Secure Paiement Process
     - Free
 
-- Bonus : Chat function
+- Bonus : Chat function✅
 
 
 
@@ -70,7 +70,7 @@ User : ✅
             - String
             
  
-Event:
+Event:✅
         - Name:
             -Required
             - String
@@ -123,7 +123,7 @@ Share the work :
     
     user-Models.js : Model of User ✅
 
-    event-Models.js : Model of Event
+    event-Models.js : Model of Event✅
 
 
 

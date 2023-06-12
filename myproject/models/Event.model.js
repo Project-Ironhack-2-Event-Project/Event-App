@@ -24,7 +24,8 @@ const eventSchema = new Schema(
         //not required
         pictures: {
             type: String,
-            required: false
+            required: false,
+            default: "../images/div-home1.jpg"
         },
         likes: {
             type: Number,
