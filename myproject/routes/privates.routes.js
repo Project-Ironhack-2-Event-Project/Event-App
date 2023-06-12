@@ -38,7 +38,19 @@ router.post('/profil/:id/edit', (req, res, next) => {
 
 
 router.get("/profil", (req, res, next) => {
-    res.render('privates/profil');
+
+    Event.find()
+        .then((eventFromDB) => {
+            const eventData = {
+                eventList: eventFromDB
+            }    
+            res.render('privates/profil', eventData)
+        })
+        .catch((error) => {
+            console.log("error with event From DB profil User", error)
+            next(error);
+        })
+
 })
 
 
