@@ -24,6 +24,7 @@ router.post('/profil/create', (req, res, next)=>{
         name: req.body.name,
         place: req.body.place,
         date: req.body.date,
+        description: req.body.description,
         pictures: req.body.pictures,
         likes: req.body.likes,
         price: req.body.price
