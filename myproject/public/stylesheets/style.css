@@ -314,6 +314,7 @@ color: black;
 .profil{
   width: 100%;
   background-color: #EBEBEB;
+  padding : 0.2em 0em;
 }
 
 .profil header{
@@ -338,13 +339,22 @@ color: black;
   flex-flow: row wrap;
   justify-content: center;
   width: 100%;
+  padding: 1em 1em 3em;
 }
-.href-profil{
+.href-profil a{
   color: #ff7b00;
 }
+
+.href-profil a:hover{
+  color: #ff7b00;
+  text-decoration: underline;
+}
+
 #btn-profil button{
   padding: 1em 1.5em;
+  margin-bottom: 2em;
 }
+
 
 
 

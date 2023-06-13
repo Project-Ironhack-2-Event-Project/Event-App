@@ -9,6 +9,8 @@
         </div>
     </header>        
 
+    <hr>
+
     <div class="profil-event-title">
         <h2>My Event</h2>
     </div>
@@ -32,9 +34,11 @@
                 <p>{{this.place}}</p>
                 <p>{{this.date}}</p>
                 <div id="btn-profil">
-                    <a class="href-profil" href="/event/{{this._id}}">Details Here</a>
-                    <button><a href="/profil/{{this._id}}/edit">Edit</a></button>
-                    <button><a href="/profil/delete">Delete</a></button>
+                    <button><a href="/event/{{this._id}}">Details Here</a></button>
+                    <div class="href-profil">
+                        <a href="/profil/{{this._id}}/edit">Edit   →</a>
+                        <a href="/profil/delete">Delete   →</a>
+                    </div>
                 </div>
             </div>
         {{/each}}
