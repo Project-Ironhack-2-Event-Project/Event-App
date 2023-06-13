@@ -30,7 +30,7 @@ router.post('/profil/:id/edit', (req, res, next) => {
     }
     Event.findByIdAndUpdate(eventId, editEvent, {new: true})
         .then(() => {
-            res.redirect('/event/event-details')
+            res.redirect('/profil')
             // it think this should redirect to the details of the event we just edited
         })
         .catch(e => next(e))
