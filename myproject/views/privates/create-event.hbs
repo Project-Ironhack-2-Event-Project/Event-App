@@ -1,6 +1,6 @@
 <div class="create-form">
   <h2>Create</h2>
-  <form action="/profil/create" method="POST">
+  <form action="/profil/create" method="POST" enctype="multipart/form-data">
 
     <label> Title :
       <input type="text" name="title" placeholder="Title" />
@@ -33,7 +33,7 @@
     </label>
     
     <label> Pictures of Event :
-      <input type="image" name="pictures"/>
+      <input type="file" name="pictures"/>
     </label>
     
     <label> Price of Event :
