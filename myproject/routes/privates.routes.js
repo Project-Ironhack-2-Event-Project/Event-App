@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const fileUploader = require('../config/cloudinary.config');
+
 const Event = require('../models/Event.model');
 
 // EDIT EVENT
@@ -61,19 +62,21 @@ router.get("/profil/create", (req, res, next) => {
 })
 router.post('/profil/create', fileUploader.single('pictures'), (req, res, next)=>{
     // console.log(req.body);
-    const newEvent = {
+
+
+    newEvent = {
         title: req.body.title,
         place: req.body.place,
         type: req.body.type,
         date: req.body.date,
         description: req.body.description,
-        pictures: req.file.path,
+        pictures: req.file ? req.file.path : '../images/div-home1.jpg',
         likes: req.body.likes,
         price: req.body.price
     }
+
     Event.create(newEvent)
         .then((newEvent) => {
-            console.log(newEvent);
             res.redirect('/profil')
         })
         .catch(e => next(e))
