@@ -1,4 +1,5 @@
-const { Schema, model } = require("mongoose");
+const {mongoose, Schema, model } = require("mongoose");
+
 
 const eventSchema = new Schema(
     {
@@ -38,6 +39,15 @@ const eventSchema = new Schema(
         description: {
             type: String,
             required: false
+        },
+        type: {
+            type: String,
+            required: true,
+            enum:[ "Concert","Theater","Outside","Other", "Party", "Sport", "Dinner", "Bar", "Talking"]
+        },
+        author: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "author"
         },
         //maxParticipant
         //condition

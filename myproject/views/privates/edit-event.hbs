@@ -3,27 +3,27 @@
   <form action="/profil/:id/edit" method="POST">
 
     <label> Title :
-      <input type="text" name="title" placeholder="{{this.title}}" />
+      <input type="text" name="title"  value="{{eventEdit.title}}" />
     </label>
 
     <label> Place of Event :
-      <input type="text" name="place" placeholder="{{this.place}}" />
+      <input type="text" name="place" value="{{eventEdit.place}}" />
     </label>
 
     <label> Description of Event :
-      <textarea id="description-input" type="text" name="description" rows="3" placeholder="Description of your Event" ></textarea>
+      <textarea id="description-input" type="text" name="description" rows="3" value="{{eventEdit.description}}" ></textarea>
     </label>
 
     <label> Date of Event :
-      <input type="date" name="date"  />
+      <input type="date" name="date" value="{{eventEdit.date}}" />
     </label>
     
     <label> Pictures of Event :
-      <input type="text" name="images"/>
+      <input type="picture" name="images"/>
     </label>
     
     <label> Price of Event :
-      <input type="number" name="price" placeholder="{{this.price}}"/>
+      <input type="number" name="price" value="{{eventEdit.price}}"/>
     </label>
 
     <button id="btn-edit" type="submit">Edit your event</button>

@@ -9,8 +9,9 @@ router.get("/profil/:id/edit", (req, res, next) => {
     // console.log(req.params);
     Event.findById(eventId)
         .then(eventToEdit => {
+            console.log(eventToEdit);
             res.render('privates/edit-event', {
-                event: eventToEdit
+                eventEdit: eventToEdit
             });
         })
         .catch(e => next(e))
@@ -63,6 +64,7 @@ router.post('/profil/create', (req, res, next)=>{
     const newEvent = {
         title: req.body.title,
         place: req.body.place,
+        type: req.body.type,
         date: req.body.date,
         description: req.body.description,
         pictures: req.body.pictures,

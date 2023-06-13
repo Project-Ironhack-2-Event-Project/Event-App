@@ -1,10 +1,20 @@
 <div class="profil">
     <header>
-        <img src="profil-img">
-        <h2>Hey, this.username !</h2>
-        <p>Welcome on your Profil</p>
-    </header>
+        <div class="profil-img">
+            <img src="profil-img">
+        </div>
+        <div class="profil-information">
+            <h2>Hey, this.username !</h2>
+            <p>Welcome on your Profil</p>
+        </div>
+    </header>        
+
+    <div class="profil-event-title">
+        <h2>My Event</h2>
+    </div>
+
     <article class="list-event">
+
             <div class="card-event">
                 <img src="../images/div-home1.jpg">
                 <h3>Football Party</h3>
@@ -22,7 +32,7 @@
                 <p>{{this.place}}</p>
                 <p>{{this.date}}</p>
                 <div id="btn-profil">
-                    <button><a href="/event/:id">Details Here</a></button>
+                    <button><a href="/event/{{this._id}}">Details Here</a></button>
                     <button><a href="/profil/{{this._id}}/edit">Edit</a></button>
                     <button><a href="/profil/delete">Delete</a></button>
                 </div>
