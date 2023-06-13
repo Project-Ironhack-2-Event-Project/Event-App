@@ -20,7 +20,18 @@ router.get("/event", (req, res, next) => {
 })
 
 router.get("/event/:id", (req, res, next) => {
-    res.render('event/event-details');
+    const Id = req.params.id
+
+    Event.findById(Id)
+        .then((eventFromDB) => {
+            //console.log(eventFromDB);
+
+            res.render('event/event-details', {eventId: eventFromDB})
+        })
+        .catch((error) => {
+            console.log("error with id and details page", error);
+            next(error)
+        })
 })
 
 

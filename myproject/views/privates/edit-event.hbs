@@ -6,12 +6,25 @@
       <input type="text" name="title"  value="{{eventEdit.title}}" />
     </label>
 
+    <label> Type of your Event :
+      <select name="type" >
+          <option value="Concert">Concert</option>
+          <option value="Theater">Theater</option>
+          <option value="Outside">Outside</option>
+          <option value="Dinner">Dinner</option>
+          <option value="Sport">Sport</option>
+          <option value="Bar">Bar</option>
+          <option value="Talking">Talking</option>
+          <option value="Party">Party</option>
+          <option value="Other">Other</option>
+      </select>
+  </label>
     <label> Place of Event :
       <input type="text" name="place" value="{{eventEdit.place}}" />
     </label>
 
     <label> Description of Event :
-      <textarea id="description-input" type="text" name="description" rows="3" value="{{eventEdit.description}}" ></textarea>
+      <textarea id="description-input" type="text" name="description" rows="3" >{{eventEdit.description}}</textarea>
     </label>
 
     <label> Date of Event :
