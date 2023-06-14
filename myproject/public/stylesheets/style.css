@@ -222,6 +222,7 @@ nav li{
 .card-event h3{
   font-size: 2em;
   color: #ff7b00;
+  text-align: center;
 }
 
 .card-event img{

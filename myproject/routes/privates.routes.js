@@ -74,7 +74,7 @@ router.post('/profil/create', fileUploader.single('pictures'), (req, res, next)=
     // console.log(req.body);
     const userId = req.session.userId
     const usernameOfAuthor = req.session.currentUser.username
-    console.log(usernameOfAuthor);
+
     newEvent = {
         title: req.body.title,
         place: req.body.place,
