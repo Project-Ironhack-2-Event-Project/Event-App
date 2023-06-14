@@ -1,4 +1,4 @@
-const Event = require('../models/event');
+const Event = require('../models/Event.model');
 
 // Afficher les événements créés par l'utilisateur connecté
 exports.showProfile = (req, res) => {

@@ -51,7 +51,7 @@ router.get("/profil", isLoggedIn, (req, res, next) => {
 
     Event.find()
         .then((eventFromDB) => {
-
+            
             res.render('privates/profil', { userInSession: req.session.currentUser , eventList: eventFromDB})
         })
         .catch((error) => {
@@ -64,11 +64,12 @@ router.get("/profil", isLoggedIn, (req, res, next) => {
 
 // CREATE EVENT
 router.get("/profil/create", isLoggedIn, (req, res, next) => {
+    
     res.render('privates/create-event');
-})
+})  
 router.post('/profil/create', fileUploader.single('pictures'), (req, res, next)=>{
     // console.log(req.body);
-
+    const userId = req.session.userId
 
     newEvent = {
         title: req.body.title,
@@ -79,7 +80,7 @@ router.post('/profil/create', fileUploader.single('pictures'), (req, res, next)=
         pictures: req.file ? req.file.path : '../images/div-home1.jpg',
         likes: req.body.likes,
         price: req.body.price,
-        users: req.params._id
+        users: userId
     }
 
     Event.create(newEvent)
