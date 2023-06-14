@@ -70,7 +70,8 @@ router.get("/profil/create", isLoggedIn, (req, res, next) => {
 router.post('/profil/create', fileUploader.single('pictures'), (req, res, next)=>{
     // console.log(req.body);
     const userId = req.session.userId
-
+    const usernameOfAuthor = req.session.currentUser.username
+    console.log(usernameOfAuthor);
     newEvent = {
         title: req.body.title,
         place: req.body.place,
@@ -80,7 +81,8 @@ router.post('/profil/create', fileUploader.single('pictures'), (req, res, next)=
         pictures: req.file ? req.file.path : '../images/div-home1.jpg',
         likes: req.body.likes,
         price: req.body.price,
-        users: userId
+        users: userId,
+        username: usernameOfAuthor,
     }
 
     Event.create(newEvent)

@@ -45,6 +45,9 @@ const eventSchema = new Schema(
             type: mongoose.Schema.Types.ObjectId,
             ref: "users"
         },
+        username: {
+            type: String,
+        },
         //maxParticipant
         //condition
     },
