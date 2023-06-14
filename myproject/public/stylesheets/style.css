@@ -355,13 +355,9 @@ color: black;
   flex-flow: row wrap;
   justify-content: center;
   width: 100%;
-  padding: 1em 1em 3em;
+
 }
 
-#btn-profil button{
-  padding: 1em 1.5em;
-  margin-bottom: 2em;
-}
 .href-profil{
   display: flex;
   flex-flow: row wrap;
@@ -369,6 +365,8 @@ color: black;
 }
 .href-profil a{
   color: #ff7b00;
+  padding: 1em;
+  margin: 0.5em;
 }
 
 .href-profil a:hover{
@@ -380,8 +378,8 @@ color: black;
   background-color: black;
   color: #ff7b00;
   cursor: pointer;
-  padding: 0em;
-  margin: 0;
+  padding: 1em;
+  margin: 0.5em;
   font-size: 1em;
 }
 
