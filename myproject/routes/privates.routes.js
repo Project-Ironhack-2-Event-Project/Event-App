@@ -1,11 +1,19 @@
 const express = require('express');
 const router = express.Router();
+
+//Add Cloudinary Api
 const fileUploader = require('../config/cloudinary.config');
 
+// Add Models
 const Event = require('../models/Event.model');
+const User = require('../models/User.model')
+
+//Add Middleware
+const isLoggedOut = require("../middleware/isLoggedOut");
+const isLoggedIn = require("../middleware/isLoggedIn");
 
 // EDIT EVENT
-router.get("/profil/:id/edit", (req, res, next) => {
+router.get("/profil/:id/edit", isLoggedIn, (req, res, next) => {
     const eventId = req.params.id
     // console.log(req.params);
     Event.findById(eventId)
@@ -39,7 +47,7 @@ router.post('/profil/:id/edit', fileUploader.single('pictures'), (req, res, next
 
 
 // LIST of EVENTS (in profil)
-router.get("/profil", (req, res, next) => {
+router.get("/profil", isLoggedIn, (req, res, next) => {
 
     Event.find()
         .then((eventFromDB) => {
@@ -57,7 +65,7 @@ router.get("/profil", (req, res, next) => {
 
 
 // CREATE EVENT
-router.get("/profil/create", (req, res, next) => {
+router.get("/profil/create", isLoggedIn, (req, res, next) => {
     res.render('privates/create-event');
 })
 router.post('/profil/create', fileUploader.single('pictures'), (req, res, next)=>{
@@ -83,7 +91,7 @@ router.post('/profil/create', fileUploader.single('pictures'), (req, res, next)=
 })
 
 //DELETE EVENT
-router.post("/profil/:id/delete", (req, res, next) => {
+router.post("/profil/:id/delete", isLoggedIn,(req, res, next) => {
     const eventId = req.params.id
     Event.findByIdAndDelete(eventId)
         .then(() => {
@@ -94,7 +102,7 @@ router.post("/profil/:id/delete", (req, res, next) => {
         })
 })
 
-router.get("/profil/favorite", (req, res, next) => {
+router.get("/profil/favorite", isLoggedIn,(req, res, next) => {
     res.render('privates/favorites-event');
 })
 
