@@ -2,6 +2,12 @@
   <h2>Sign Up</h2>
   <form action="/auth/signup" method="POST">
 
+    <div class="errorMessage-form">
+      {{#if errorMessage}}
+          <p class="error">{{errorMessage}}</p>
+      {{/if}}
+    </div>
+
     <label> Username :
       <input type="text" name="username" placeholder="Your username" />
     </label>
@@ -17,8 +23,5 @@
     <button id="btn-signup" type="submit">Sign Up</button>
 
 
-    {{#if errorMessage}}
-      <p class="error">{{errorMessage}}</p>
-    {{/if}}
   </form>
 </div>

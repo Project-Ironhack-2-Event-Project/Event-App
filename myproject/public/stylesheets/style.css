@@ -355,7 +355,6 @@ color: black;
   flex-flow: row wrap;
   justify-content: center;
   width: 100%;
-
 }
 
 .href-profil{
@@ -485,6 +484,15 @@ color: black;
   color: black;
 }
 
+.errorMessage-form{
+  padding: 0.5em 0em;
+  width: 100%;
+  border-radius: 0.5em;
+}
+.signup-form p, .login-form p{
+  color: black;
+  font-size: 0.5em;
+}
 
 
 
