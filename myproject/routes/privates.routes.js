@@ -51,10 +51,8 @@ router.get("/profil", isLoggedIn, (req, res, next) => {
 
     Event.find()
         .then((eventFromDB) => {
-            const eventData = {
-                eventList: eventFromDB
-            }    
-            res.render('privates/profil', eventData)
+
+            res.render('privates/profil', { userInSession: req.session.currentUser , eventList: eventFromDB})
         })
         .catch((error) => {
             console.log("error with event From DB profil User", error)
@@ -80,7 +78,8 @@ router.post('/profil/create', fileUploader.single('pictures'), (req, res, next)=
         description: req.body.description,
         pictures: req.file ? req.file.path : '../images/div-home1.jpg',
         likes: req.body.likes,
-        price: req.body.price
+        price: req.body.price,
+        users: req.params._id
     }
 
     Event.create(newEvent)

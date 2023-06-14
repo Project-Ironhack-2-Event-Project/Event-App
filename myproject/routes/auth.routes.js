@@ -130,6 +130,8 @@ router.post("/login", isLoggedOut, (req, res, next) => {
           // Add the user object to the session object
           req.session.currentUser = user.toObject();
           // Remove the password field
+          req.session.userId = user._id
+          console.log(user._id);
           delete req.session.currentUser.password;
 
           res.redirect("/profil");
