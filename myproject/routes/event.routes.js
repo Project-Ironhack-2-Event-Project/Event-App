@@ -5,7 +5,15 @@ const mongoose = require("mongoose");
 
 router.get("/event", (req, res, next) => {
 
-    Event.find()
+    let typeFilter = req.query.type
+    console.log(typeFilter);
+
+    let filter = {};
+    if(typeFilter){
+        filter = { type: typeFilter}
+    }
+
+    Event.find(filter)
         .then((eventFromDB) => {
             const eventData = {
                 eventList: eventFromDB
