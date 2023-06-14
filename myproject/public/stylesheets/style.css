@@ -31,6 +31,12 @@ nav li{
   display: inline;
 }
 
+
+
+
+
+
+
 .header-home{
   margin: 0;
 }
@@ -147,6 +153,11 @@ nav li{
 
 
 
+
+
+
+
+
 .list-event-contain{
   background-color: #EBEBEB;
   width: 100%;
@@ -246,6 +257,8 @@ color: black;
 
 
 
+
+
 .event-detail{
   background-color: #EBEBEB;
   width: 100%;
@@ -312,6 +325,8 @@ color: black;
 
 
 
+
+
 .profil{
   width: 100%;
   background-color: #EBEBEB;
@@ -342,6 +357,16 @@ color: black;
   width: 100%;
   padding: 1em 1em 3em;
 }
+
+#btn-profil button{
+  padding: 1em 1.5em;
+  margin-bottom: 2em;
+}
+.href-profil{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
 .href-profil a{
   color: #ff7b00;
 }
@@ -350,11 +375,25 @@ color: black;
   color: #ff7b00;
   text-decoration: underline;
 }
-
-#btn-profil button{
-  padding: 1em 1.5em;
-  margin-bottom: 2em;
+.href-profil button{
+  border: none;
+  background-color: black;
+  color: #ff7b00;
+  cursor: pointer;
+  padding: 0em;
+  margin: 0;
+  font-size: 1em;
 }
+
+.href-profil button:hover{
+  color: #ff7b00;
+  text-decoration: underline;
+  background-color: black;
+}
+
+
+
+
 
 
 

@@ -3,9 +3,6 @@ const {mongoose, Schema, model } = require("mongoose");
 
 const eventSchema = new Schema(
     {
-        //user who created this event
-        user: {},
-        //required = true
         title: {
             type: String,
             required: true,
@@ -44,9 +41,9 @@ const eventSchema = new Schema(
             required: true,
             enum:[ "Concert","Theater","Outside","Other", "Party", "Sport", "Dinner", "Bar", "Talking"]
         },
-        author: {
+        users: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "author"
+            ref: "users"
         },
         //maxParticipant
         //condition

@@ -35,11 +35,15 @@
                 <p>{{this.date}}</p>
                 <div id="btn-profil">
                     <button><a href="/event/{{this._id}}">Details Here</a></button>
-                    <div class="href-profil">
-                        <a href="/profil/{{this._id}}/edit">Edit   →</a>
-                        <a href="/profil/delete">Delete   →</a>
-                    </div>
                 </div>
+                
+                <div class="href-profil">
+                    <a href="/profil/{{this._id}}/edit">Edit   →</a>
+                        <form method="post" action="/profil/{{this._id}}/delete" >
+                            <button type="submit">Delete →</button>
+                        </form>
+                    </div>
+
             </div>
         {{/each}}
 

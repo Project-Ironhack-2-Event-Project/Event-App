@@ -17,7 +17,7 @@ router.get("/profil/:id/edit", (req, res, next) => {
         })
         .catch(e => next(e))
 })
-router.post('/profil/:id/edit', (req, res, next) => {
+router.post('/profil/:id/edit', fileUploader.single('pictures'), (req, res, next) => {
     const eventId = req.params.id
     // console.log(req.params);
     const editEvent = {
@@ -25,7 +25,7 @@ router.post('/profil/:id/edit', (req, res, next) => {
         place: req.body.place,
         date: req.body.date,
         description: req.body.description,
-        pictures: req.body.pictures,
+        pictures: req.file ? req.file.path : '../images/div-home1.jpg',
         likes: req.body.likes,
         price: req.body.price
     }
@@ -86,8 +86,12 @@ router.post('/profil/create', fileUploader.single('pictures'), (req, res, next)=
 router.post("/profil/:id/delete", (req, res, next) => {
     const eventId = req.params.id
     Event.findByIdAndDelete(eventId)
-        .then(() => res.redirect('/profil'))
-        .catch(e => next(e))
+        .then(() => {
+        res.redirect('/profil')
+        })
+        .catch(e => {
+            next(e)
+        })
 })
 
 router.get("/profil/favorite", (req, res, next) => {
