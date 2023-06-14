@@ -11,6 +11,7 @@ const User = require('../models/User.model')
 //Add Middleware
 const isLoggedOut = require("../middleware/isLoggedOut");
 const isLoggedIn = require("../middleware/isLoggedIn");
+const isOwner = require("../middleware/isOwner");
 
 // EDIT EVENT
 router.get("/profil/:id/edit", isLoggedIn, (req, res, next) => {
@@ -47,18 +48,20 @@ router.post('/profil/:id/edit', fileUploader.single('pictures'), (req, res, next
 
 
 // LIST of EVENTS (in profil)
-router.get("/profil", isLoggedIn, (req, res, next) => {
+router.get("/profil", isLoggedIn , (req, res, next) => {
+    const userId = req.session.userId
 
-    Event.find()
+    Event.find({users: userId}) 
         .then((eventFromDB) => {
+            console.log(eventFromDB.users);
             
-            res.render('privates/profil', { userInSession: req.session.currentUser , eventList: eventFromDB})
+             return res.render('privates/profil', { userInSession: req.session.currentUser , eventList: eventFromDB})
+            
         })
         .catch((error) => {
             console.log("error with event From DB profil User", error)
             next(error);
         })
-
 })
 
 
