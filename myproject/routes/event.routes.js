@@ -12,13 +12,14 @@ router.get("/event", (req, res, next) => {
         filter = { type: typeFilter}
     }
     
-    let citySearch = req.query.search;
+    let citySearch = req.query.city;
     console.log(citySearch);
+    console.log(req.query);
     if (citySearch){
         filter = {city: citySearch};
     }
 
-
+    console.log(filter);
 
     Event.find(filter)
         .then((eventFromDB) => {

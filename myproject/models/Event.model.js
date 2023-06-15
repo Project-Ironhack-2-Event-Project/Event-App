@@ -55,7 +55,7 @@ const eventSchema = new Schema(
         city: {
             type: String,
             require: true,
-            enum:["Bordeaux", "Berlin" , "Paris"]
+            enum:["Bordeaux", "Berlin" , "Paris", 'Sevilla', 'Other']
         }
         //condition
     },

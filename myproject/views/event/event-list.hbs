@@ -6,7 +6,7 @@
         <label for="dates"> Filter :
             <select name="type" id="type-select">
                 <option value="" disabled selected hidden>Select an event type</option>
-                <option value="all">All</option>
+                {{!-- <option value="all">All</option> --}}
                 <option value="Concert">Concert</option>
                 <option value="Theater">Theater</option>
                 <option value="Outside">Outside</option>
@@ -19,11 +19,22 @@
             </select>
         </label>
 
-        <label> Search by City :
+        {{!-- <label> Search by City :
             <input type="search" name="search-bar" placeholder="Search your event">
             <button type="submit">Search</button>
+        </label> --}}
+        <label for="dates">
+            <select name="city" id="type-select">
+                <option value="" disabled selected hidden>Select a city</option>
+                {{!-- <option value="all">All</option> --}}
+                <option value="Bordeaux">Bordeaux</option>
+                <option value="Berlin">Berlin</option>
+                <option value="Paris">Paris</option>
+                <option value="Sevilla">Sevilla</option>
+                <option value="Other">Other</option>
+            </select>
         </label>
-        
+        <button type="submit">Search</button>
     </form>
 
 <article class="list-event">
