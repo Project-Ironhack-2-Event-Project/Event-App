@@ -48,7 +48,15 @@ const eventSchema = new Schema(
         username: {
             type: String,
         },
-        //maxParticipant
+        // maxParticipant: {
+        //     type: Number,
+        //     require: true,
+        // }, 
+        city: {
+            type: String,
+            require: true,
+            enum:["Bordeaux", "Berlin" , "Paris"]
+        }
         //condition
     },
     {
