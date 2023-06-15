@@ -1,13 +1,14 @@
 <div class="edit-form">
   <h2>Edit :</h2>
   <form action="/profil/{{eventEdit._id}}/edit" method="POST">
-    {{!-- <p>{{eventEdit}}</p> --}}
+    <p>{{eventEdit}}</p>
     <label> Title :
       <input type="text" name="title"  value="{{eventEdit.title}}" />
     </label>
-
+  
     <label> Type of your Event :
       <select name="type" >
+          <option value="{{eventEdit.type}}">{{eventEdit.type}}</option>
           <option value="Concert">Concert</option>
           <option value="Theater">Theater</option>
           <option value="Outside">Outside</option>
@@ -22,6 +23,7 @@
 
       <label> Choose a City :
       <select name="city">
+        <option value="{{eventEdit.city}}">{{eventEdit.city}}</option>
         <option value="Bordeaux">Bordeaux</option>
         <option value="Berlin">Berlin</option>
         <option value="Paris">Paris</option>
