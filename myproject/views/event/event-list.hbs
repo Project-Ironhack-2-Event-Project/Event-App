@@ -19,10 +19,6 @@
             </select>
         </label>
 
-        {{!-- <label> Search by City :
-            <input type="search" name="search-bar" placeholder="Search your event">
-            <button type="submit">Search</button>
-        </label> --}}
         <label for="dates">
             <select name="city" id="type-select">
                 <option value="" disabled selected hidden>Select a city</option>
@@ -36,6 +32,8 @@
         </label>
         <button type="submit">Search</button>
     </form>
+
+<hr>
 
 <article class="list-event">
             {{#each eventList}} 
