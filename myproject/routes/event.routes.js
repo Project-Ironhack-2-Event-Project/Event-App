@@ -6,17 +6,18 @@ const mongoose = require("mongoose");
 router.get("/event", (req, res, next) => {
 
     let typeFilter = req.query.type
-    console.log(typeFilter);
+    // console.log(typeFilter);
 
     let filter = {};
-    if(typeFilter){
+    if(typeFilter && typeFilter !== 'all'){
         filter = { type: typeFilter}
     }
 
     Event.find(filter)
         .then((eventFromDB) => {
             const eventData = {
-                eventList: eventFromDB
+                eventList: eventFromDB,
+                selectedType: typeFilter || 'all', 
             }    
             res.render('event/event-list', eventData)
         })
