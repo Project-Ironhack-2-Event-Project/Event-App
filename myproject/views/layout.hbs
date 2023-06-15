@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Event App</title>
+    <title>{{appTitle}}</title>
     <link rel="shortcut icon" href="../images/icone.png">
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
@@ -19,12 +19,12 @@
           <a href="/profil"><li>Profil</li></a>
           <a href="/profil/create"><li>Create</li></a>
 
-          <div class="nav-right">
+          <div class="nav-right">        
+            {{#if currentUser }}
+            <a href="/auth/logout"><li>Logout</li></a>   
+               {{else }} 
             <a href="/auth/signup"><li>Register</li></a>
-              {{#if (loginButton) }}
             <a href="/auth/login"><li>Login</li></a>
-                {{else }}
-            <a href="/auth/logout"><li>Logout</li></a>
               {{/if}}
           </div>
         </ul>

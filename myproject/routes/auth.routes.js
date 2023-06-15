@@ -17,7 +17,7 @@ const isLoggedIn = require("../middleware/isLoggedIn");
 
 // GET /auth/signup
 router.get("/signup", isLoggedOut, (req, res) => {
-  res.render("auth/signup", {loginButton: true});
+  res.render("auth/signup");
 });
 
 // POST /auth/signup
@@ -149,7 +149,7 @@ router.get("/logout", isLoggedIn, (req, res) => {
       return;
     }
 
-    res.redirect("/", {loginButton: false});
+    res.redirect("/");
   });
 });
 
