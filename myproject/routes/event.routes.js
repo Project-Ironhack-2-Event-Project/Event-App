@@ -5,13 +5,20 @@ const mongoose = require("mongoose");
 
 router.get("/event", (req, res, next) => {
 
-    let typeFilter = req.query.type
+    let typeFilter = req.query.type;
     // console.log(typeFilter);
-
     let filter = {};
     if(typeFilter && typeFilter !== 'all'){
         filter = { type: typeFilter}
     }
+    
+    let citySearch = req.query.search;
+    console.log(citySearch);
+    if (citySearch){
+        filter = {city: citySearch};
+    }
+
+
 
     Event.find(filter)
         .then((eventFromDB) => {
