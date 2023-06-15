@@ -204,6 +204,7 @@ nav li{
 
   margin: 2em 2.89em;
   width: 28%;
+  height: auto;
   background-color: black;
   border: none;
 }
@@ -227,7 +228,7 @@ nav li{
 
 .card-event img{
     width: 100%;
-    height: auto;
+    height: 22em;
 }
 
 .card-event button{

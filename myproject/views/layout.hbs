@@ -21,8 +21,11 @@
 
           <div class="nav-right">
             <a href="/auth/signup"><li>Register</li></a>
+              {{#if (loginButton) }}
             <a href="/auth/login"><li>Login</li></a>
+                {{else }}
             <a href="/auth/logout"><li>Logout</li></a>
+              {{/if}}
           </div>
         </ul>
       </nav>
