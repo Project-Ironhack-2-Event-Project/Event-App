@@ -1,6 +1,6 @@
 <div class="edit-form">
   <h2>Edit : {{eventEdit.title}}</h2>
-  <form action="/profil/{{eventEdit._id}}/edit" method="POST">
+  <form action="/profil/{{eventEdit._id}}/edit" method="POST" enctype="multipart/form-data">
     <label> Title :
       <input type="text" name="title"  value="{{eventEdit.title}}" />
     </label>
