@@ -16,11 +16,11 @@
 
     <div id="event-chat">
         <h2>Chat :</h2>
-        <form>
+        <form id="chat-form" action="/event/{{eventId._id}}" method="post">
             <label>
-                <input id="message-input" type="text" placeholder="Enter Message">
-                <button  id="send-chat-btn" type="submit">Send</button>
+                <input id="message-input" type="text" name="content" placeholder="Enter Message">
             </label>
+                <button  id="send-chat-btn" type="submit">Send</button>
         </form>
     </div>
 </div>
