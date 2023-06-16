@@ -33,6 +33,7 @@ router.post('/profil/:id/edit', fileUploader.single('pictures'), (req, res, next
         title: req.body.title,
         place: req.body.place,
         city: req.body.city,
+        type: req.body.type,
         date: req.body.date,
         description: req.body.description,
         pictures: req.file ? req.file.path : '../images/div-home1.jpg',
