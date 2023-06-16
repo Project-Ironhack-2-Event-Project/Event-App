@@ -331,14 +331,12 @@ color: black;
 }
 
 .profil header{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
   padding: 5em ;
 }
 
-.profil-information p{
+.profil-information p,h2{
   color: black;
+  text-align: center;
 }
 
 .profil-event-title{
