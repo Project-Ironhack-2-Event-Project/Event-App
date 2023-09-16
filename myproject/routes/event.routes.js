@@ -44,7 +44,7 @@ router.get("/event", (req, res, next) => {
 
 router.get("/event/:id", (req, res, next) => {
     const Id = req.params.id
-
+    //const socket = io();
     
     Event.findById(Id)
         .then((eventFromDB) => {
@@ -58,36 +58,36 @@ router.get("/event/:id", (req, res, next) => {
         })
 })
 
-// router.post("/event/:id?", isLoggedIn, (req, res, next) => {
-//     const Id = req.params.id
+router.post("/event/:id?", isLoggedIn, (req, res, next) => {
+    const Id = req.params.id
 
-//     const user = req.session.currentUser.username
+    const user = req.session.currentUser.username
 
-//     const infoChat = {
-//         content: req.body.content,
-//         user: user,
-//         eventId: Id,
-//     }
+    const infoChat = {
+        content: req.body.content,
+        user: user,
+        eventId: Id,
+    }
 
 
-//     Event.findById(Id)
-//         .then((messageInfo) => {
+    Event.findById(Id)
+        .then((messageInfo) => {
 
-//                 if (!messageInfo) {
-//                     return res.status(404).json({ error: 'Événement introuvable.' });
-//                 }
+                if (!messageInfo) {
+                    return res.status(404).json({ error: 'Événement introuvable.' });
+                }
 
-//         const newChat = new Chat(infoChat)
+        const newChat = new Chat(infoChat)
 
-//         newChat.save();
+        newChat.save();
         
 
-//         })
-//         .catch((error) => {
-//         res.status(500).json({ error: "We have an error with the message creation", error})
-//     })
+        })
+        .catch((error) => {
+        res.status(500).json({ error: "We have an error with the message creation", error})
+    })
 
 
-// });
+});
 
 module.exports = router;
