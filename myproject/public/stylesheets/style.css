@@ -599,7 +599,6 @@ hr{
   .header-home{
     margin: 0;
     width: 100vw;
-    display: flex;
   }
   .header-home img{
     position: relative;
@@ -615,8 +614,9 @@ hr{
     align-items: center;
     flex-flow: column wrap;
     font-size: 12px;
-    top: 15%;
-    width: 100vw;
+    top: 20%;
+    left: 27%;
+    width: 50%;
   }
   
   .header-home h1, p{
@@ -626,11 +626,12 @@ hr{
   
   
   .article-home{
+    position: relative;
     display: flex;
     flex-flow: column;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     background-color: #EBEBEB;
   }
   
@@ -647,7 +648,7 @@ hr{
   }
   
   .div-home h3, p, button{
-    margin: 1em 1em;
+    margin: 1em 1.5em;
   }
   
   .div-home h3{
@@ -680,13 +681,13 @@ hr{
   .second-div-home{
     background-color: black;
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column-reverse;
   }
   
   .second-div-home div{
-    margin: 15vh 1em  10vh;
+    margin: 10vh 1.5em;
     font-size: 1em;
     line-height: 1.8em;
   }
