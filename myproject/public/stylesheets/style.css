@@ -599,6 +599,7 @@ hr{
   .header-home{
     margin: 0;
     width: 100vw;
+    display: flex;
   }
   .header-home img{
     position: relative;
@@ -615,6 +616,7 @@ hr{
     flex-flow: column wrap;
     font-size: 12px;
     top: 15%;
+    width: 100vw;
   }
   
   .header-home h1, p{
@@ -684,7 +686,7 @@ hr{
   }
   
   .second-div-home div{
-    margin: 4em;
+    margin: 15vh 1em  10vh;
     font-size: 1em;
     line-height: 1.8em;
   }
@@ -696,13 +698,13 @@ hr{
   
   .second-div-home h3{
     font-size: 1.5em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     color: white;
   }
   
   .second-div-home p{
     font-size: 1.2em;
-    margin: 2em 0em;
+    margin: 1em 0em;
     color: white;
   }
   
