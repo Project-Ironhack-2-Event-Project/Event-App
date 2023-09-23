@@ -7,14 +7,33 @@
     <title>Event App</title>
     <link rel="shortcut icon" href="../images/icone.png">
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script>
+        function showResponsiveMenu() {
+          var menu = document.getElementById("topnav_responsive_menu");
+          var icon = document.getElementById("topnav_hamburger_icon");
+          var root = document.getElementById("root");
+          if (menu.className === "") {
+            menu.className = "open";
+            icon.className = "open";
+            root.style.overflowY = "hidden";
+          } else {
+            menu.className = "";                    
+            icon.className = "";
+            root.style.overflowY = "hidden";
+          }
+        }
+      </script>
   </head>
 
-  <body>
-      <div class="burger-menu">
+  <body id="root">
+      <div id="topnav_hamburger_icon" href="javascript:void(0);" onclick="showResponsiveMenu()">
+        <span></span>
+        <span></span>
         <span></span>
       </div>
-      
-      <nav>
+
+      <nav >
+        <div id="topnav_responsive_menu">
         <ul>
           <a href="/"><li>Home</li></a>
           <a href="/event"><li>Event</li></a>
@@ -32,6 +51,7 @@
               {{/if}}
           </div>
         </ul>
+        </div>
       </nav>
 
     {{{body}}}
@@ -39,7 +59,7 @@
     <hr>
       <footer>
         <hr>
-          <h4>Project By Juan Lozano & Pierre Docquin</h4>
+          <h4>Project By Pierre Docquin</h4>
        <hr>
        </footer>
    
