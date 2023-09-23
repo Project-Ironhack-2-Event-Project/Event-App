@@ -872,6 +872,9 @@ hr{
     background-color: black;
     border: none;
   }
+  .card-event button{
+    margin-bottom: 2em;
+  }
   .list-event-contain{
     padding: 0;
   }
