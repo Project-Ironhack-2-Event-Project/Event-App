@@ -643,41 +643,11 @@ hr{
     color: #ff7b00;
     padding-bottom: 1em;
   }
-  .div-home img{
-    width: 100%;
-  }
   
   .div-home h3, p, button{
     margin: 1em 1.5em;
   }
-  
-  .div-home h3{
-    font-size: 1.5em;
-  }
-  
-  .div-home p{
-    font-size: 1.2em;
-  }
-  
-  .div-home button{
-    padding: 1em 0em;
-    border-radius: 3em;
-    border: none;
-    transition: 1s;
-  }
-  .div-home a{
-    text-decoration: none;
-    color: black;
-    padding: 1em 2em;
-    border-radius: 3em;
-  }
-  
-  .div-home button:hover{
-    background-color: #ff7b00;
-    color: black;
-  }
-  
-  
+
   .second-div-home{
     position: relative;
     background-color: black;
@@ -693,22 +663,40 @@ hr{
     line-height: 1.8em;
   }
   
-  .second-div-home a{
-    text-decoration: none;  
-    color: #ff7b00;
+
+  .title-event{
+    padding: 1em 0em;  
   }
   
-  .second-div-home h3{
-    font-size: 1.5em;
-    margin-bottom: 1em;
-    color: white;
+  .search-bar-event{
+    margin-left: 2%;
+  }
+
+  
+  .search-bar-event label{
+    margin: 0em 0.5em;
+  }
+
+  
+  .list-event{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:flex-start;
+    margin: 0em 0em;
   }
   
-  .second-div-home p{
-    font-size: 1.2em;
-    margin: 1em 0em;
-    color: white;
+  .card-event{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0em;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    border: none;
   }
-  
+  .list-event-contain{
+    padding: 0;
+  }
   
 }
